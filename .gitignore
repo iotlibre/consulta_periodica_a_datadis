@@ -1,0 +1,3 @@
+config*
+registers/reading_register.txt
+logs/*.log
