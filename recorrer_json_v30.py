@@ -64,7 +64,7 @@ def mqtt_tx(client,s_value):
     mqtt_auth = { 'username': mqtt_login, 'password': mqtt_password }
     response = publish.single(mqtt_topic_prefix + "/" + client, s_value, hostname=mqtt_ip, auth=mqtt_auth)
     # response : None
-    # En el servidor: Client mosq-QQQQQaaaaaaaaaaaaa received PUBLISH (d0, q0, r0, m0, 'datadis/ES00XXXXXXXXXXXXXXXX0F', ... (144 bytes))
+    # En el servidor: Client mosq-QQQQQaaaaaaaaaaaaa received PUBLISH (d0, q0, r0, m0, 'datadis/ESxxxxxxxxxxxxxxxxxx0F', ... (144 bytes))
      
 ''' Procesar la lectura antes de enviarla. Incluir acumulatedKWh
 d viene con el formato:
@@ -90,7 +90,7 @@ def procesar_lectura(d,rr_index_):
 
     logging.debug("mqtt ---> " + str(d))
     
-    # Comentar esta lInea para pruebas que no se envien al servidor
+    # Comentar esta linea para pruebas que no se envien al servidor
     mqtt_tx(d['cups'], str(d))
     
 ''' formato_time. Los datos recibidos desde Datadis:
@@ -259,7 +259,8 @@ def consulta_de_consumos(x):
     star_month_str = str(star_date_d.month)
     if (star_date_d.month <= 9):
         star_month_str = "0" + str(star_date_d.month)
-    startDateQ = str(star_date_d.year) + "/" + star_month_str + "/" + star_day_str
+    # startDateQ = str(star_date_d.year) + "/" + star_month_str + "/" + star_day_str
+    startDateQ = str(star_date_d.year) + "/" + star_month_str
     
     # Damos formato a endDateQ
     # Se parte de end_date_d
@@ -269,7 +270,9 @@ def consulta_de_consumos(x):
     end_month_str = str(end_date_d.month)
     if (end_date_d.month <= 9):
         end_month_str = "0" + str(end_date_d.month)
-    endDateQ = str(end_date_d.year) + "/" + end_month_str + "/" + end_day_str
+    # endDateQ = str(end_date_d.year) + "/" + end_month_str + "/" + end_day_str
+    endDateQ = str(end_date_d.year) + "/" + end_month_str
+
     
     url = "http://datadis.es/api-private/api/get-consumption-data?authorizedNif="
     url += cifQ
@@ -378,6 +381,7 @@ for x in reading_register_:
 de todos los usuarios en un fichero
 los registros se han ido actualizando en cada bucle
 '''
-# Comentar esta lInea para probar sin que se registre
+# Comentar esta linea para probar sin que se registre
 save_reading_register(reading_register_)
+
 
