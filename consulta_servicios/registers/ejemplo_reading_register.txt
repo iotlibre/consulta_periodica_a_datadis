@@ -1,0 +1,1 @@
+[{"cif": "CIFLECTUR"}, {"cif": "CIFNUMER2"}]
