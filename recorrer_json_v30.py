@@ -289,7 +289,7 @@ def consulta_de_consumos(x):
     # Consulta de los consumos
     payload={}
 
-    # key_path = "registers/cooperase_key.txt"
+    # key_path = "registers/temporal_key.txt"
     key_file_open=open(key_path, "r", encoding="utf-8")
     key_file_red = key_file_open.read()
     key_file_open.close()
@@ -352,7 +352,7 @@ def obtener_key():
 # mqtt y credenciales de datadis
 parser.read('config_datadis.ini')
 
-key_path = "registers/cooperase_key.txt"
+key_path = "registers/temporal_key.txt"
 
 obtener_key()
 

@@ -1,3 +1,5 @@
-config*
-registers/reading_register.txt
-logs/*.log
+config_datadis.ini
+reading_register.txt
+temporal_key.txt
+*.log
+
