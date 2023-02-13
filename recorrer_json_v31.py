@@ -169,7 +169,7 @@ def comprobar_consulta(data_, rr_position, last_datetime_r_d_):  #reading regist
         try:
             # Calcular la hora hasta la que llegan los datos (llegan ceros al final)
             for x in data_:
-                if(x['consumptionKWh']! = 0):
+                if(x['consumptionKWh'] != 0):
                     power_data = formato_time(x)
                     logging.debug("tiempo del valor: " +str(power_data[1]) + " vs " + str(last_datetime_r_d_))
                     if(power_data[1] > last_datetime_r_d_):
