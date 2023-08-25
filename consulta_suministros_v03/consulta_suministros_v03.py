@@ -1,6 +1,6 @@
 
 ''' Notas
-Version vie 25 ago 2023 09:57:12 CEST
+vie 25 ago 2023 12:47:22 CEST
 
 tipos de varialbles en python
 https://www.codigofuente.org/variables-en-python/
