@@ -1,0 +1,14 @@
+2023_07_27 recorrer_json_v31_consulta_baisca_v0.py
+la version  ha funcionado correctamente del 1 al 27(actual) Julio
+probamos con 3 meses y funciona, Con el mismo CUPs (alnhaber modificado la consulta)
+
+2023_07_27 recorrer_json_v31_consulta_baisca_v1.py
+Limpieza de código funciona
+ficha de inicio
+
+2023_07_28 recorrer_json_v31_consulta_baisca_v20.py
+[ok] Elimino last_datetime_r_d de todo el código
+
+2023_07_28 recorrer_json_v31_consulta_baisca_v21.py
+[ok] incluyo fecha final en codigo y en readin register
+[ok] Elimino la hora de reading register para simplificarlo
