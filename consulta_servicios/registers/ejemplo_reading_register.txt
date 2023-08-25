@@ -1,1 +1,1 @@
-[{"cif": "CIFLECTUR"}, {"cif": "CIFNUMER2"}]
+[{"cif": "CIFLECTUR", "distributorCode": "2"}, {"cif": "CIFNUMER2", "distributorCode": "2"}]
