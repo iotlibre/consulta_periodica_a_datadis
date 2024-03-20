@@ -48,7 +48,7 @@ Guardar la FECHA de la ultima lectura en reading_register_
 se guarda en la posicion del listado que corresponde
 reading_register_ se guarda al final del script para recuperarlo en la siguiente consulta
 reading_register_[n] ---> 
-    [{"ES0031104116371034RA0F": {"cif": "X5483924B", "energy": 3465.756, "distributorCode": "2", 
+    [{"ES00XXXXXXXXXXXXXXXX0F": {"cif": "X11111111", "energy": 3465.756, "distributorCode": "2", 
     "pointType": "5", "ultima": {"year": 2024, "month": 3, "day": 2, "hour": 22, "minute": 0}}}]
 '''
 def registrar_ultima_fecha(d, position_):
