@@ -67,11 +67,12 @@ def mqtt_tx(client,s_value):
     # Parseo de las variables
     mqtt_topic_prefix = parser.get('mqtt_broker','mqtt_topic_prefix')
     mqtt_ip = parser.get('mqtt_broker','mqtt_ip')
+    mqtt_port = parser.getint('mqtt_broker', 'mqtt_port')
     mqtt_login = parser.get('mqtt_broker','mqtt_login')
     mqtt_password = parser.get('mqtt_broker','mqtt_password')
 
     mqtt_auth = { 'username': mqtt_login, 'password': mqtt_password }
-    response = publish.single(mqtt_topic_prefix + "/" + client, s_value, hostname=mqtt_ip, auth=mqtt_auth)
+    response = publish.single(mqtt_topic_prefix + "/" + client, s_value, hostname=mqtt_ip, port=mqtt_port, auth=mqtt_auth)
 
 def db_ioe_tx(ioe_d, id_c_p ):  # ioe dictionary  id_consumer_profile
 
